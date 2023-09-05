@@ -8,7 +8,7 @@ Your app description
 
 
 class C(BaseConstants):
-    NAME_IN_URL = ('corrupcion')
+    NAME_IN_URL = 'corrupcion'
     PLAYERS_PER_GROUP = 4
     NUM_ROUNDS = 5
     dotacion = 50
