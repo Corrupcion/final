@@ -1,0 +1,101 @@
+{{ block title }}
+    Monitor
+{{ endblock }}
+{{ block content }}
+
+<p> El ciudadano ofreció un soborno de 3 monedas experimentales al oficial y el oficial aceptó, ambos obteniendo beneficios personales&#x26A0. Esto redujo la dotación inicial los ciudadanos 2 en 12 monedas experimentales.
+
+<p> Tienes la opción de castigar a uno, a los dos o a ninguno. Recuerda que el monto usado para castigar se resta de tu dotación inicial y la cantidad de castigo que elijas para castigar al ciudadano uno se multiplicará por 2, y la retribución del ciudadano se reducirá en esta cantidad duplicada. Lo mismo ocurre con los oficiales. <span style="color: red;"><b>Advertencia: En esta ronda el daño que se causó al otro ciudadano era del doble a la sección anterior.</span></b>
+
+
+<p> ¿Qué decides?&#x1F914
+
+    <br>
+    <br>
+    
+    
+    <form name="formulario">
+
+        <input id="Castigara a dos" type="radio" name="Castigo" value="1">
+        <label for="Castigar a dos">
+            Castigar a ambos. Con <select class="form1" name="ambos_monto_ciudadano_conSoborno" id="ambos_monto_ciudadano_conSoborno">
+    <option value=""></option> <!-- Agregué una opción vacía -->
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+</select> monedas experimentales al ciudadano y <select class="form2" name="ambos_monto_oficial_conSoborno" id="ambos_monto_oficial_conSoborno">
+    <option value=""></option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+</select> monedas experimentales al oficial.
+
+        </label>
+
+        <br>
+
+        <input id="Castigar a ciudadano" type="radio" name="Castigo" value="2"> <label for="Castigar a ciudadano">
+
+            Castigar soborno del ciudadano con <select class="form3" name="monto_ciudadano_conSoborno" id="monto_ciudadano_conSoborno">
+    <option value=""></option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+</select> monedas experimentales.
+
+        </label>
+
+        <br>
+
+        <input id="Castigar a oficial" type="radio" name="Castigo" value="3"> <label for="Castigar a oficial">
+
+            Castigar soborno del oficial con <select class="form4" name="monto_oficial_conSoborno" id="monto_oficial_conSoborno">
+    <option value=""></option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+</select> monedas experimentales.
+
+        </label>
+
+        <br>
+
+        <input id="No castigar" type="radio" name="Castigo" value="4"> <label for="No Castigar">  No castigar. </label>
+
+        <br>
+        <button class="btn btn-primary" id="extraerValor">Siguiente</button>
+    </form>
+
+
+    <br>
+
+
+    {{ endblock }}

@@ -1,0 +1,88 @@
+{{ block title }}
+    Instrucciones de roles
+{{ endblock }}
+{{ block content }}
+
+<p>Al principio de cada ronda, cada jugador recibe <span style="color: red;"><b>50 monedas experimentales</b></span>. Cada ronda consta de cuatro etapas. </p>
+
+<p><b>Etapa 1: Rol del ciudadano 1.&#x1F9D1</b> </p>
+
+<p>Si te tocó este rol, puedes decidir ofrecer un soborno al oficial de tu grupo.</p>
+
+<li>Si no ofreces un soborno al oficial, tu recompensa sigue siendo igual a 50 monedas experimentales. La ronda termina y comienza la siguiente. </li>
+<li>Si ofreces un soborno al oficial, le ofreces 3 monedas experimentales. Estas 3 monedas experimentales te serán devueltas sólo si el oficial rechaza el soborno. Si acepta el soborno, tus ganancias podrían duplicarse.  </li>
+
+<p></p>
+<p></p>
+
+<p> <b>Etapa 2: Rol del oficial.&#x1F46E</b></p>
+
+<p>Si eres oficial, se te comentará la decisión tomada por el ciudadano 1 de tu grupo.
+    Si el ciudadano 1 de tu grupo te ha ofrecido un soborno, puedes decidir si aceptarlo o rechazarlo.
+    Aceptar el soborno implica aceptar las 3 monedas experimentales ofrecidas por el ciudadano 1 y conceder un favor al ciudadano 1, lo que causa una pérdida al ciudadano 2.
+    Exactamente: </p>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 90%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <tr>
+        <td><b><span style="text-align: center; display: block;">Si aceptas el soborno</span></b></td>
+        <td><b><span style="text-align: center; display: block;">Si no aceptas el soborno</span></b></td>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                <li><p>Tus ganancias se duplicarán (además de recibir las 3 monedas experimentales ofrecidas por el ciudadano 1).</p></li>
+                <li><p>La ganancias del ciudadano 1 se duplicarán.</p></li>
+                <li><p>Cada ciudadano 2 pierde "x" monto de monedas experimentales y puede perder más monedas si se ofrecen y aceptan sobornos en los otros grupos.</p></li>
+                <li><p>Usted y el ciudadano 1 pueden recibir un castigo por parte del monitor (en la etapa 4).</p></li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li><p>Recibes 0 monedas experimentales adicionales (y devuelve las 3 monedas experimentales al ciudadano 1).</p></li>
+                <li><p>El ciudadano 1 recibe 0 monedas adicionales.</p></li>
+                <li><p>El ciudadano 1 puede recibir un castigo por parte del monitor.</p></li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
+
+<p></p>
+<p> <b>Etapa 3: Rol del ciudadano 2.&#x1F464</b></p>
+
+<p>Tu participación es pasiva: no puedes tomar ninguna decisión.
+    Por cada soborno ofrecido y aceptado en esta sala, pierdes "x" monedas. </p>
+
+<p> <b>Etapa 4: Rol del monitor.&#x1F50D</b></p>
+
+<p> Si eres monitor, recibirás información sobre las decisiones tomadas por el ciudadano 1 y el oficial de tu grupo.
+<p><li> Puedes elegir si quieres castigar al ciudadano 1 y/o al oficial, y con qué monto, corriendo tú con los gastos.
+    Puedes elegir una cantidad entre 0 y 10 monedas para castigar al ciudadano 1, y una cantidad entre 0 y 10 monedas para castigar al oficial.
+    Tu recompensa se verá reducida por la cantidad de castigo que hayas elegido.</li></p>
+
+<p><li>La cantidad de castigo que elijas para castigar al ciudadano 1 se multiplicará por 2, y la retribución del ciudadano se reducirá en esta cantidad duplicada. Lo mismo ocurre con los oficiales. </li></p>
+
+<p> <span style="color: red;"><b>Por ejemplo</b></span>, si gastas 5 monedas para castigar al ciudadano 1 y 2 monedas para castigar al oficial: tus ganancias se reducen en 7 monedas (= 5+2); las ganancias del ciudadano 1 se reducen en diez monedas (= 5×2); las ganancias del oficial se reducen en 4 monedas (= 2×2).</p>
+
+    {{ next_button }}
+
+{{ endblock }}
